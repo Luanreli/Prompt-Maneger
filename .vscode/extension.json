@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "miguelsolorio.symbols",
+    "formulahendry.auto-rename-tag"
+  ]
+}

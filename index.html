@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Prompt</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="img/favicon_io/favicon-16x16.png"
+    />
+    <!-- Import Google Fonts: Inter 400, 500, 600, 700 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar"></aside>
+
+      <main class="main">
+        <div class="main-header">
+          <button id="button-copy" class="btn-outline btn">
+              <img src="img/copiar_io/favicon-16x16.png" alt="Copiar" class="icon" />
+            <span class=text>Copiar</span>
+          </button>
+
+          <button id="btn-save" class="btn-primary btn w-150">Salvar</button>
+        </div>
+
+      <div data-placeholder="Título do prompt" class="editable-wrapper" id="titlw-wrapper">
+
+        <h1 id="prompt-title" class="prompt-title" contenteditable="true">⚡ Planejamento de tarefas semanais</h1>
+      </div>
+
+      <div placeholder="Conteudo do prompt ..." class="editable-wrapper" id="content-wrapper">
+        <div id="prompt-content" class="prompt-content" contenteditable="true">
+          Me ajude a organizar minha semana de forma equilibrada.<br />Distribua
+          minhas tarefas profissionais e pessoais em blocos de tempo
+          realistas.<br /><br />Sugira horários para foco profundo e momentos
+          para pausas estratégicas.<br />Inclua dicas de priorização. No final,
+          entregue o plano em formato de checklist diário para fácil
+          acompanhamento.
+        </div>
+      </div>  
+      </main>
+    </div>
+  </body>
+</html>
