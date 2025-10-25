@@ -1,1 +1,1 @@
-# Prompt-Maneger
+# Prompt-Manager
