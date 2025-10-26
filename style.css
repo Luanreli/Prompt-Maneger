@@ -1,3 +1,59 @@
+.sidebar-content {
+  padding: 24px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: var(--gray-800);
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 44px;
+  position: relative;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 16px;
+  flex: 1;
+}
+
+.btn-new-prompt {
+  margin-top: 8px;
+  background: var(--accent-600);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-new-prompt:hover {
+  background: var(--accent-500);
+}
+
+.search-separator {
+  height: 1px;
+  background: var(--gray-200);
+  margin-top: 8px;
+}
+
 :root {
   --white: #ffffff;
   --accent-600: #4863f7;
@@ -63,7 +119,7 @@ body {
   width: 100%;
 }
 
-.btn{
+.btn {
   height: 32px;
   display: flex;
   align-items: center;
@@ -91,8 +147,8 @@ body {
   background: var(--gray-100)
 }
 
-.icon{
-  width: 10px;
+.icon {
+  width: 20px;
   height: 20px;
 }
 
@@ -128,15 +184,15 @@ body {
 .prompt-content {
   font-size: 16px;
   color: var(--white);
-outline: none;
-line-height: 32px;
+  outline: none;
+  line-height: 32px;
 }
 
 .editable-wrapper {
-position: relative;
+  position: relative;
 }
 
-.editable-wrapper::before{
+.editable-wrapper::before {
   content: attr(data-placeholder);
   position: absolute;
   color: var(--gray-200);
@@ -144,17 +200,53 @@ position: relative;
   opacity: 0;
 }
 
-.editable-wrapper.is-empty::before{
+.editable-wrapper.is-empty::before {
   opacity: 1;
 }
 
-#title-wrapper.is-empy{
+#title-wrapper.is-empty {
   font-size: 32px;
   font-weight: 600;
   color: var(--gray-200);
 }
 
-#content-wrapper.is-empy{
+#content-wrapper.is-empty {
   font-size: 16px;
   color: var(--gray-200);
+  line-height: 32px;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0x;
+}
+
+.open-toggle {
+  position: absolute;
+  top: 62px;
+  left: 62px;
+  display: none;
+}
+
+.sidebar {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 32px;
+  background-color: var(--gray-800);
+  border-right: 0.5px solid var(--gray-700);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 24px;
 }

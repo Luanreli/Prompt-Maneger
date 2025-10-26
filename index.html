@@ -7,7 +7,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="img/favicon_io/favicon-16x16.png"
+      href="assets/favicon.svg"
     />
     <!-- Import Google Fonts: Inter 400, 500, 600, 700 -->
     <link
@@ -15,28 +15,53 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="index.js"></script>
   </head>
   <body>
     <div class="app">
-      <aside class="sidebar"></aside>
+      <button class="icon-button open-toggle" id="btn-open">
+        <img src="assets/open.svg" alt="Abrir Menu" class="icon"/>
+      </button>
+
+      <aside class="sidebar">
+
+        <header class="sidebar-header">
+          <img src="assets/logo.svg" alt="Logo" class="logo" />
+
+          <button class="icon-button close-toggle" id="btn-close">
+            <img src="assets/collapse.svg" alt="Fechar Menu" class="icon"/>
+          </button>
+          
+        </header>
+        <div class="sidebar-content">
+          <div class="search-container">
+            <span class="search-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="7" stroke="#737373" stroke-width="2"/>
+                <line x1="15.2929" y1="15.7071" x2="12.7071" y2="13.1213" stroke="#737373" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <input type="text" class="search-input" placeholder="Buscar prompt..." />
+          </div>
+          <button class="btn-new-prompt">+ Novo prompt</button>
+          <div class="search-separator"></div>
+        </div>
+      </aside>
 
       <main class="main">
         <div class="main-header">
           <button id="button-copy" class="btn-outline btn">
-              <img src="img/copiar_io/favicon-16x16.png" alt="Copiar" class="icon" />
+              <img src="assets/copy.svg" alt="Copiar" class="icon" />
             <span class=text>Copiar</span>
           </button>
 
           <button id="btn-save" class="btn-primary btn w-150">Salvar</button>
         </div>
 
-      <div data-placeholder="Título do prompt" class="editable-wrapper" id="titlw-wrapper">
-
+      <div data-placeholder="Título do prompt" class="editable-wrapper" id="title-wrapper">
         <h1 id="prompt-title" class="prompt-title" contenteditable="true">⚡ Planejamento de tarefas semanais</h1>
       </div>
 
-      <div placeholder="Conteudo do prompt ..." class="editable-wrapper" id="content-wrapper">
+      <div data-placeholder="Conteudo do prompt..." class="editable-wrapper" id="content-wrapper">
         <div id="prompt-content" class="prompt-content" contenteditable="true">
           Me ajude a organizar minha semana de forma equilibrada.<br />Distribua
           minhas tarefas profissionais e pessoais em blocos de tempo
@@ -48,5 +73,6 @@
       </div>  
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
