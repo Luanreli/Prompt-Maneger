@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manager Prompt</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="assets/favicon.svg"
-    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -18,53 +14,71 @@
   <body>
     <div class="app">
       <button class="icon-button open-toggle" id="btn-open">
-        <img src="assets/open.svg" alt="Abrir Menu" class="icon"/>
+        <img src="assets/open.svg" alt="Abrir Menu" class="icon" />
       </button>
 
       <aside class="sidebar">
-
         <header class="sidebar-header">
           <img src="assets/logo.svg" alt="Logo" class="logo" />
 
           <button class="icon-button close-toggle" id="btn-close">
-            <img src="assets/collapse.svg" alt="Fechar Menu" class="icon"/>
+            <img src="assets/collapse.svg" alt="Fechar Menu" class="icon" />
           </button>
-          
         </header>
         <div class="sidebar-content">
           <div class="search-container">
-            <img src="assets/search.svg" alt="Buscar" class="icon search-icon" />
-            <input type="text" class="search-input" placeholder="Buscar prompt..." />
+            <img
+              src="assets/search.svg"
+              alt="Buscar"
+              class="icon search-icon"
+            />
+            <input
+              type="text"
+              class="search-input"
+              id="search-input"
+              placeholder="Buscar prompt..."
+            />
           </div>
           <button class="btn-new-prompt">+ Novo prompt</button>
           <div class="search-separator"></div>
+
+          <ul class="prompt-list" id="prompt-list">
+            
+          </ul>
         </div>
       </aside>
 
       <main class="main">
         <div class="main-header">
           <button id="button-copy" class="btn-outline btn">
-              <img src="assets/copy.svg" alt="Copiar" class="icon" />
-            <span class=text>Copiar</span>
+            <img src="assets/copy.svg" alt="Copiar" class="icon" />
+            <span class="text">Copiar</span>
           </button>
 
           <button id="btn-save" class="btn-primary btn w-150">Salvar</button>
         </div>
 
-      <div data-placeholder="Título do prompt" class="editable-wrapper" id="title-wrapper">
-        <h1 id="prompt-title" class="prompt-title" contenteditable="true">⚡ Planejamento de tarefas semanais</h1>
-      </div>
+        <div
+          data-placeholder="Título do prompt"
+          class="editable-wrapper"
+          id="title-wrapper">
+          <h1 id="prompt-title" class="prompt-title" contenteditable="true">
 
-      <div data-placeholder="Conteudo do prompt..." class="editable-wrapper" id="content-wrapper">
-        <div id="prompt-content" class="prompt-content" contenteditable="true">
-          Me ajude a organizar minha semana de forma equilibrada.<br />Distribua
-          minhas tarefas profissionais e pessoais em blocos de tempo
-          realistas.<br /><br />Sugira horários para foco profundo e momentos
-          para pausas estratégicas.<br />Inclua dicas de priorização. No final,
-          entregue o plano em formato de checklist diário para fácil
-          acompanhamento.
+          </h1>
         </div>
-      </div>  
+
+        <div
+          data-placeholder="Conteudo do prompt..."
+          class="editable-wrapper"
+          id="content-wrapper"
+        >
+          <div
+            id="prompt-content"
+            class="prompt-content"
+            contenteditable="true"
+          >
+          </div>
+        </div>
       </main>
     </div>
     <script src="script.js"></script>
